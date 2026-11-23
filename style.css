@@ -1,40 +1,29 @@
-/* Italy-inspired design.
+/* Site styles.
    Mobile-first: the base styles are for phones, wider screens are handled with min-width media queries. */
 
 :root {
-  --blu-italia: #0066cc;     /* main color: blue, inspired by Italy's official "Blu Italia" */
-  --blu-scuro: #004d99;
-  --blu-hover: #003a75;
-  --sfondo: #f2f7fd;
-  --testo: #1f2a37;
-  --verde: #008c45;          /* small accent only */
-  --rosso: #b3141d;          /* small accent only */
-  --bordo: #bcd4ee;
+  --blue: #0066cc;     /* main color: blue */
+  --blue-dark: #004d99;
+  --blue-hover: #003a75;
+  --bg: #f2f7fd;
+  --text: #1f2a37;
+  --green: #008c45;          /* small accent only */
+  --red: #b3141d;          /* small accent only */
+  --border: #bcd4ee;
 }
 
 body {
-  background-color: var(--sfondo);
-  color: var(--testo);
+  background-color: var(--bg);
+  color: var(--text);
   font-family: "Nunito", Verdana, sans-serif;
   font-size: 18px;
   line-height: 1.7;
   max-width: 720px;
   margin: 0 auto 40px auto;
-  padding: 0 18px;
+  padding: 24px 18px 0 18px;
   /* Text can run longer in other languages (W3C): let it wrap and hyphenate instead of overflowing */
   overflow-wrap: break-word;
   hyphens: auto;
-}
-
-/* Thin green-white-red stripe at the top: a small nod to the Italian flag, kept subtle */
-body::before {
-  content: "";
-  display: block;
-  height: 6px;
-  margin: 0 0 22px 0;
-  border-radius: 0 0 4px 4px;
-  background: linear-gradient(to right, var(--verde) 33.33%, #ffffff 33.33% 66.66%, var(--rosso) 66.66%);
-  box-shadow: 0 0 0 1px var(--bordo);
 }
 
 h1 {
@@ -42,7 +31,7 @@ h1 {
   font-weight: 600;
   font-size: 34px;
   line-height: 1.2;
-  color: var(--blu-italia);
+  color: var(--blue);
   letter-spacing: 0.5px;
   margin: 0 0 4px 0;
 }
@@ -50,24 +39,24 @@ h1 {
 h2, h3 {
   font-family: "Fredoka", "Trebuchet MS", sans-serif;
   font-weight: 500;
-  color: var(--blu-scuro);
+  color: var(--blue-dark);
   line-height: 1.3;
 }
 
 .tagline {
   font-style: italic;
-  color: var(--blu-scuro);
+  color: var(--blue-dark);
   margin-top: 0;
 }
 
 strong {
   font-weight: 700;
-  color: var(--blu-scuro);
+  color: var(--blue-dark);
 }
 
 /* Red used sparingly: only for the one real warning on the site */
-strong.avviso {
-  color: var(--rosso);
+strong.warning {
+  color: var(--red);
 }
 
 img {
@@ -79,12 +68,12 @@ img {
 }
 
 a {
-  color: var(--blu-italia);
+  color: var(--blue);
   font-weight: 700;
 }
 
 a:hover {
-  color: var(--blu-hover);
+  color: var(--blue-hover);
 }
 
 /* Navigation: big tap targets for phones, wraps when labels are long */
@@ -94,7 +83,7 @@ nav {
   gap: 8px;
   margin: 14px 0 26px 0;
   padding-bottom: 14px;
-  border-bottom: 3px solid var(--bordo);
+  border-bottom: 3px solid var(--border);
 }
 
 nav a {
@@ -103,7 +92,7 @@ nav a {
   min-height: 44px;
   padding: 6px 16px;
   background-color: #ffffff;
-  border: 2px solid var(--bordo);
+  border: 2px solid var(--border);
   border-radius: 22px;
   text-decoration: none;
   letter-spacing: 0.3px;
@@ -116,26 +105,26 @@ nav a:hover {
 /* Marks which page you are currently on */
 nav a.current {
   color: #ffffff;
-  background-color: var(--blu-italia);
-  border-color: var(--blu-italia);
+  background-color: var(--blue);
+  border-color: var(--blue);
 }
 
 /* Highlight box: puts the axolotl's best-known achievement up front */
-.primato {
+.highlight {
   background-color: #ffffff;
-  border-left: 6px solid var(--verde);
+  border-left: 6px solid var(--green);
   border-radius: 12px;
   padding: 12px 18px;
   margin: 22px 0;
   box-shadow: 0 2px 8px rgba(0, 102, 204, 0.12);
 }
 
-.primato h3 {
+.highlight h3 {
   margin: 0 0 4px 0;
-  color: var(--blu-italia);
+  color: var(--blue);
 }
 
-.primato p {
+.highlight p {
   margin: 0;
 }
 
@@ -143,7 +132,7 @@ nav a.current {
 .caption {
   font-size: 15px;
   font-style: italic;
-  color: var(--blu-scuro);
+  color: var(--blue-dark);
   margin-top: 8px;
 }
 
@@ -164,7 +153,7 @@ form {
 form label {
   display: block;
   font-weight: 700;
-  color: var(--blu-scuro);
+  color: var(--blue-dark);
   margin-top: 16px;
   margin-bottom: 4px;
 }
@@ -177,16 +166,16 @@ form textarea {
   min-height: 48px;
   font-family: inherit;
   font-size: 18px;
-  color: var(--testo);
+  color: var(--text);
   background-color: #ffffff;
-  border: 2px solid var(--bordo);
+  border: 2px solid var(--border);
   border-radius: 12px;
   padding: 10px 12px;
 }
 
 form input:focus,
 form textarea:focus {
-  outline: 3px solid var(--blu-italia);
+  outline: 3px solid var(--blue);
   outline-offset: 2px;
 }
 
@@ -196,7 +185,7 @@ form button {
   font-family: "Fredoka", "Trebuchet MS", sans-serif;
   font-size: 18px;
   color: #ffffff;
-  background-color: var(--blu-italia);
+  background-color: var(--blue);
   border: none;
   border-radius: 12px;
   padding: 12px 28px;
@@ -206,14 +195,14 @@ form button {
 }
 
 form button:hover {
-  background-color: var(--blu-hover);
+  background-color: var(--blue-hover);
 }
 
 /* Tablets and desktops */
 @media (min-width: 700px) {
   body {
     margin-top: 0;
-    padding: 0 20px;
+    padding: 24px 20px 0 20px;
   }
 
   h1 {
