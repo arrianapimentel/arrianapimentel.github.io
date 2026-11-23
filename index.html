@@ -1,215 +1,102 @@
-/* Site styles.
-   Mobile-first: the base styles are for phones, wider screens are handled with min-width media queries. */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-:root {
-  --blue: #0066cc;     /* main color: blue */
-  --blue-dark: #004d99;
-  --blue-hover: #003a75;
-  --bg: #f2f7fd;
-  --text: #1f2a37;
-  --green: #008c45;          /* small accent only */
-  --red: #b3141d;          /* small accent only */
-  --border: #bcd4ee;
-}
+  <!-- SEO #1: keyword-focused title tag -->
+  <title>All About Axolotls: Facts, Colors, and Why They Are Endangered</title>
+  <meta name="description" content="A beginner's guide to axolotls: what they are, how they regenerate limbs, the color morphs beyond pink, and why they are critically endangered in the wild.">
 
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: "Nunito", Verdana, sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 720px;
-  margin: 0 auto 40px auto;
-  padding: 24px 18px 0 18px;
-  /* Text can run longer in other languages (W3C): let it wrap and hyphenate instead of overflowing */
-  overflow-wrap: break-word;
-  hyphens: auto;
-}
+  <!-- Two Google Fonts: Fredoka for headings, Nunito for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-h1 {
-  font-family: "Fredoka", "Trebuchet MS", sans-serif;
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 1.2;
-  color: var(--blue);
-  letter-spacing: 0.5px;
-  margin: 0 0 4px 0;
-}
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-h2, h3 {
-  font-family: "Fredoka", "Trebuchet MS", sans-serif;
-  font-weight: 500;
-  color: var(--blue-dark);
-  line-height: 1.3;
-}
+<body>
 
-.tagline {
-  font-style: italic;
-  color: var(--blue-dark);
-  margin-top: 0;
-}
+  <h1>All About Axolotls</h1>
 
-strong {
-  font-weight: 700;
-  color: var(--blue-dark);
-}
+  <!-- Navigation between the pages -->
+  <nav>
+    <a href="index.html" class="current">Home</a>
+    <a href="axolotl-facts.html">Conservation &amp; Colors</a>
+    <a href="axolotl-care.html">Care Basics</a>
+  </nav>
 
-/* Red used sparingly: only for the one real warning on the site */
-strong.warning {
-  color: var(--red);
-}
+  <main id="content">
 
-img {
-  max-width: 100%;
-  height: auto;
-  border: 6px solid #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.22);
-}
+  <img src="axolotl.png" alt="A pale pink axolotl with red feathery gills standing on aquarium gravel">
 
-a {
-  color: var(--blue);
-  font-weight: 700;
-}
+  <h2>What Is an Axolotl?</h2>
+  <p>
+    Axolotls are salamanders that never really grow up. Most salamanders lose their gills and crawl
+    onto land as adults, but the axolotl keeps its larval body its entire life and stays in the
+    water, a trait scientists call neoteny.
+  </p>
 
-a:hover {
-  color: var(--blue-hover);
-}
+  <!-- Achievement-oriented highlight: the axolotl's best-known "record" up front -->
+  <aside class="highlight">
+    <h3>Its Record: Regeneration</h3>
+    <p>
+      <strong>Axolotls can regrow a lost leg, their tail, parts of their spinal cord, and even
+      portions of their heart and brain, with no scarring at all.</strong>
+    </p>
+  </aside>
 
-/* Navigation: big tap targets for phones, wraps when labels are long */
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 14px 0 26px 0;
-  padding-bottom: 14px;
-  border-bottom: 3px solid var(--border);
-}
+  <p>
+    That is why researchers study them so closely. In the wild they live in the canals of Lake
+    Xochimilco near Mexico City and they are critically endangered. However, thousands live happily
+    in labs and home aquariums.
+  </p>
 
-nav a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  padding: 6px 16px;
-  background-color: #ffffff;
-  border: 2px solid var(--border);
-  border-radius: 22px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-}
+  <h2>The Parts of an Axolotl</h2>
 
-nav a:hover {
-  background-color: #e3eefb;
-}
+  <img src="axolotl-diagram.png" alt="A labeled side-view illustration of an axolotl, titled Axolotl (Ambystoma mexicanum). Twelve labels identify the body parts listed in the caption below.">
+  <p class="caption">
+    Illustration of axolotl anatomy. The labeled parts are the head, eye, nostril, mouth,
+    external gills (three branches per side), trunk, dorsal fin (continuous from the back into
+    the tail), tail, tail fin, cloaca, forelimb (four digits), and hind limb (five digits).
+    The gills and tail fin are larval features that most salamanders lose as adults, but the
+    axolotl keeps for life.
+  </p>
 
-/* Marks which page you are currently on */
-nav a.current {
-  color: #ffffff;
-  background-color: var(--blue);
-  border-color: var(--blue);
-}
+  <h2>Keep Reading</h2>
+  <p>
+    Curious why axolotls are disappearing from the wild, or what colors they come in besides pink?
+    Visit the <a href="axolotl-facts.html">Conservation &amp; Colors page</a>. Thinking about
+    keeping one? Start with the <a href="axolotl-care.html">Care Basics page</a>.
+  </p>
 
-/* Highlight box: puts the axolotl's best-known achievement up front */
-.highlight {
-  background-color: #ffffff;
-  border-left: 6px solid var(--green);
-  border-radius: 12px;
-  padding: 12px 18px;
-  margin: 22px 0;
-  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.12);
-}
+  <h2>Contact Me</h2>
+  <p>
+    If you have information you would like to share, or notice any errors on this site, send me a
+    message. Together we can make it better.
+  </p>
 
-.highlight h3 {
-  margin: 0 0 4px 0;
-  color: var(--blue);
-}
+  <!-- Design demo: GitHub Pages has no server, so Submit just reloads the page.
+       To make it send real email, sign up at formspree.io and replace the
+       action below with the form URL they give you. -->
+  <form action="#" method="post">
 
-.highlight p {
-  margin: 0;
-}
+    <label for="name">Your name</label>
+    <input type="text" id="name" name="name" autocomplete="name" required>
 
-/* Captions under images and videos */
-.caption {
-  font-size: 15px;
-  font-style: italic;
-  color: var(--blue-dark);
-  margin-top: 8px;
-}
+    <label for="email">Your email</label>
+    <input type="email" id="email" name="email" autocomplete="email" required>
 
-/* Video frame: matches the image styling, scales on phones */
-iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 6px solid #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.22);
-}
+    <label for="message">Your message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
 
-/* Contact form: full-width, thumb-friendly fields on phones */
-form {
-  margin-bottom: 28px;
-}
+    <button type="submit">Send message</button>
 
-form label {
-  display: block;
-  font-weight: 700;
-  color: var(--blue-dark);
-  margin-top: 16px;
-  margin-bottom: 4px;
-}
+  </form>
 
-form input,
-form textarea {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  min-height: 48px;
-  font-family: inherit;
-  font-size: 18px;
-  color: var(--text);
-  background-color: #ffffff;
-  border: 2px solid var(--border);
-  border-radius: 12px;
-  padding: 10px 12px;
-}
+  </main>
 
-form input:focus,
-form textarea:focus {
-  outline: 3px solid var(--blue);
-  outline-offset: 2px;
-}
-
-form button {
-  width: 100%;
-  min-height: 48px;
-  font-family: "Fredoka", "Trebuchet MS", sans-serif;
-  font-size: 18px;
-  color: #ffffff;
-  background-color: var(--blue);
-  border: none;
-  border-radius: 12px;
-  padding: 12px 28px;
-  margin-top: 20px;
-  cursor: pointer;
-  white-space: normal;   /* long labels can wrap */
-}
-
-form button:hover {
-  background-color: var(--blue-hover);
-}
-
-/* Tablets and desktops */
-@media (min-width: 700px) {
-  body {
-    margin-top: 0;
-    padding: 24px 20px 0 20px;
-  }
-
-  h1 {
-    font-size: 44px;
-  }
-
-  form button {
-    width: auto;
-  }
-}
+</body>
+</html>
